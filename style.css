@@ -1,0 +1,16 @@
+body {
+    background-color: burlywood;
+}
+
+.main-header {
+    text-align: center;
+    -webkit-text-stroke-width: thin;
+}
+
+
+#button-disappear {
+    margin-top: 10%;
+    margin-right: 50%;
+    margin-left: 50%;
+    width: 15%;
+}
