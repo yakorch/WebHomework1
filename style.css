@@ -1,16 +1,20 @@
-body {
-    background-color: burlywood;
+
+
+header {
+    color: white;
+    background-image: url("media/header_background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
 }
 
-.main-header {
-    text-align: center;
-    -webkit-text-stroke-width: thin;
+.invisible-back {
+    border: 0;
+    background-color: inherit;
 }
 
+section.choose-flight{
+    display: inline-grid;
 
-#button-disappear {
-    margin-top: 10%;
-    margin-right: 45%;
-    margin-left: 45%;
-    width: 15%;
 }

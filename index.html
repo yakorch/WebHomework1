@@ -1,32 +1,184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Hey!)</title>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-      src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+<header>
+	<h1>
+		Treloo
+	</h1>
+	<nav>
+		<a href="#">Section</a>
+		<a href="#">Section</a>
+		<a href="#">Section</a>
+		<a href="#">Section</a>
+		<a href="#">Section</a>
+	</nav>
+
+	<h2>
+		Discover Your Life, Travel Where You Want
+	</h2>
+	<p>
+		Would you explore nature paradise in the world, let's find the best destination in world with us.
+	</p>
+</header>
+
 <body>
-<h1 class="main-header">
-    An original heading
-</h1>
+<section class="choose-flight">
 
-<p class="first-text">
-    This is a text which tells you that $HTML \gt HDMI$ and <span class="disappear">$\int_0^{+\infty}\lambda  e^{-\lambda x} dx = 1$</span>
-</p>
+	<div class="travel-type">
+		<button class="invisible-back"><img src="media/icons/plane_icon.png" alt="plane"><span>Flight</span> </button>
+		<button class="invisible-back"><img src="media/icons/house_icon.png" alt="hotel"><span>Hotel</span></button>
+	</div>
 
-<button id="button-disappear">Click me!</button>
+	<div class="round-box">
+
+		<div class="select-block">
+			<label for="leaving-from">
+				Leaving from
+				<select id="leaving-from" name="leaving-from">
+					<option value="LA">LA</option>
+					<option value="NY">New York</option>
+					<option value="Lviv">Lviv</option>
+					<option value="Kyiv">Kyiv</option>
+				</select>
+			</label>
+		</div>
+
+
+		<img src="media/icons/small_plane.png" alt="Plane">
+
+		<div class="select-block">
+			<label for="going-to">
+				Going to
+				<select id="going-to" name="going-to">
+					<option value="LA">LA</option>
+					<option value="NY">New York</option>
+					<option value="Lviv">Lviv</option>
+					<option value="Kyiv">Kyiv</option>
+				</select>
+			</label>
+		</div>
+
+	</div>
+
+	<div class="round-box">
+		<div class="date-block">
+			<label for="leave-date">
+				<span>Leave</span><img src="media/icons/blue_small_plane.png" alt="plane">
+				<input type="date" name="leave-date" id="leave-date">
+			</label>
+		</div>
+
+		<img src="media/icons/small_date.png" alt="Date">
+
+		<div class="date-block">
+			<label for="return-date">
+				<span>Return</span> <img src="media/icons/blue_small_back_plane.png" alt="plane">
+				<input type="date" name="comeback-date" id="return-date">
+			</label>
+		</div>
+	</div>
+	<button class="invisible-back"><img src="media/icons/search_icon.png" alt="A search icon"></button>
+
+</section>
+
+<!--the INPUT FIELD is ready!)-->
+
+
+<section class="upcoming-offers">
+	<h2>
+		Special Upcoming Offers
+	</h2>
+
+	<div class="three-choices">
+		<button>Team</button>
+		<button>Couple</button>
+		<button>Family</button>
+	</div>
+
+	<div class="nice-picture-text">
+		<img src="media/round_pictures/beach_round.png" alt="Beach">
+		<span class="vertical-text">14 FEB 2022</span>
+
+		<span class="colored-round">Relax</span>
+		<span class="small-text">3 Days, 3 Nights</span>
+
+		<span class="name-of-place">Logo Sea</span>
+		<span class="price">700$ / Person</span>
+
+		<button type="submit">Book now</button>
+	</div>
+
+	<div class="nice-picture-text">
+		<img src="media/round_pictures/coast_round.png" alt="Beach">
+		<span class="vertical-text">18 JAN 2022</span>
+
+		<span class="colored-round">Adventure</span>
+		<span class="small-text">4 Days, 3 Nights</span>
+
+		<span class="name-of-place">Ansgar Scheffold</span>
+		<span class="price">400$ / Person</span>
+
+		<button type="submit">Book now</button>
+	</div>
+
+	<div class="nice-picture-text">
+		<img src="media/round_pictures/man_lake_round.png" alt="Beach">
+		<span class="vertical-text">22 DEC 2022</span>
+
+		<span class="colored-round">Relax</span>
+		<span class="small-text">7 Days, 6 Nights</span>
+
+		<span class="name-of-place">Lona X</span>
+		<span class="price">340$ / Person</span>
+
+		<button type="submit">Book now</button>
+	</div>
+
+</section>
+
+<!--the UPCOMING OFFERS is ready!)-->
+
+<section class="inspiration-block">
+	<img src="media/round_pictures/aesthtic_person.png" alt="a Man!">
+	<aside>
+		<article>
+			<h2>
+			Travel Any Corner of The World With Us
+			</h2>
+			<p class="alot-of-text">Would you explore nature paradise in the world, let’s find the best destination in world with us, Would you explore nature paradise in the world, let’s find the best destination in world with us. Would you explore nature paradise in the world, let’s find the best destination in world with us.
+				Would you explore nature paradise in the world, let’s find the best destination in world with us.
+			</p>
+		</article>
+		<button type="submit" class="blue-button">Contact us</button>
+	</aside>
+</section>
+
+<!--the INSPIRATION is ready!)-->
+
+<section>
+	<h2>
+		Recommended Destination
+	</h2>
+
+	<div class="three-choices">
+		<button>Popular</button>
+		<button>Adventure</button>
+		<button>Beach</button>
+	</div>
+
+
+
+</section>
 
 </body>
+<footer>
 
-<script src="script.js"></script>
-
-
+</footer>
 </html>
