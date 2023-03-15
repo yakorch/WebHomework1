@@ -324,6 +324,8 @@ div.pretty-blocks-keeper {
 
 .inspiration-block {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin-bottom: 250px;
 }
 
@@ -331,6 +333,18 @@ div.pretty-blocks-keeper {
     width: 45%;
     height: auto;
 }
+
+aside {
+    width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .inspiration-block {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
+
 
 article h2 {
     margin-top: 80px;
@@ -521,7 +535,6 @@ section.discount {
     border-radius: 90px;
 
 }
-
 
 
 section.discount h2 {
