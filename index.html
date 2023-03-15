@@ -5,90 +5,109 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-	<link rel="stylesheet" href="style.css">
+    <title>Travel Agency</title>
+
+    <!--This is a Poppins font u    sed in the Figma design-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-	<h1>
-		Treloo
-	</h1>
-	<nav>
-		<a href="#">Section</a>
-		<a href="#">Section</a>
-		<a href="#">Section</a>
-		<a href="#">Section</a>
-		<a href="#">Section</a>
-	</nav>
+    <div id="header-name-nav">
+        <h1>
+            Treloo
+        </h1>
+        <nav>
+            <a href="#">Review</a>
+            <a href="#">Tips</a>
+            <a href="#">Alerts</a>
+            <a href="#">Blog</a>
+            <a href="#">Blog</a>
+        </nav>
+    </div>
 
-	<h2>
-		Discover Your Life, Travel Where You Want
-	</h2>
-	<p>
-		Would you explore nature paradise in the world, let's find the best destination in world with us.
-	</p>
+
+    <h2>
+        Discover Your Life, Travel Where You Want
+    </h2>
+    <p>
+        Would you explore nature paradise in the world, let's find the best destination in world with us.
+    </p>
 </header>
 
 <!--the HEADER is ready!)-->
-
 <section class="choose-flight">
 
-	<div class="travel-type">
-		<button class="invisible-back"><img src="media/icons/plane_icon.png" alt="plane"><span>Flight</span> </button>
-		<button class="invisible-back"><img src="media/icons/house_icon.png" alt="hotel"><span>Hotel</span></button>
-	</div>
+    <div class="travel-type">
+        <button class="icon-with-button button-look-not-button">
+            <span class="contain-an-icon" id="icon-plane"></span>
+            <a href="#">Flight</a>
+        </button>
 
-	<div class="round-box">
+        <button class="icon-with-button button-look-not-button">
+            <span class="contain-an-icon" id="icon-hotel"></span>
+            <a href="#">Hotel</a>
+        </button>
+    </div>
 
-		<div class="select-block">
-			<label for="leaving-from">
-				Leaving from
-				<select id="leaving-from" name="leaving-from">
-					<option value="LA">LA</option>
-					<option value="NY">New York</option>
-					<option value="Lviv">Lviv</option>
-					<option value="Kyiv">Kyiv</option>
-				</select>
-			</label>
-		</div>
+    <div class="date-chooser">
+
+        <div class="round-box">
+
+            <div class="select-block">
+                <label for="leaving-from" class="just-grey">
+                    Leaving from
+                    <select id="leaving-from" name="leaving-from">
+                        <option value="LA">LA</option>
+                        <option value="NY">New York</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Kyiv">Kyiv</option>
+                    </select>
+                </label>
+            </div>
 
 
-		<img src="media/icons/small_plane.png" alt="Plane">
+            <img class="icon-in-date-chooser" src="media/icons/small_plane.png" alt="Plane">
 
-		<div class="select-block">
-			<label for="going-to">
-				Going to
-				<select id="going-to" name="going-to">
-					<option value="LA">LA</option>
-					<option value="NY">New York</option>
-					<option value="Lviv">Lviv</option>
-					<option value="Kyiv">Kyiv</option>
-				</select>
-			</label>
-		</div>
+            <div class="select-block">
+                <label for="going-to" class="just-grey">
+                    Going to
+                    <select id="going-to" name="going-to">
+                        <option value="LA">LA</option>
+                        <option value="NY">New York</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Kyiv">Kyiv</option>
+                    </select>
+                </label>
+            </div>
 
-	</div>
+        </div>
 
-	<div class="round-box">
-		<div class="date-block">
-			<label for="leave-date">
-				<span>Leave</span><img src="media/icons/blue_small_plane.png" alt="plane">
-				<input type="date" name="leave-date" id="leave-date">
-			</label>
-		</div>
+        <div class="round-box">
+            <div class="date-block">
+                <label for="leave-date" class="just-grey">
+                    <span>Leave</span><span class="has-right-icon" id="plane-to-right"></span>
+                    <input class="break" type="date" name="leave-date" id="leave-date">
+                </label>
+            </div>
 
-		<img src="media/icons/small_date.png" alt="Date">
+            <img class="icon-in-date-chooser" src="media/icons/small_date.png" alt="Date">
 
-		<div class="date-block">
-			<label for="return-date">
-				<span>Return</span> <img src="media/icons/blue_small_back_plane.png" alt="plane">
-				<input type="date" name="comeback-date" id="return-date">
-			</label>
-		</div>
-	</div>
-	<button class="invisible-back"><img src="media/icons/search_icon.png" alt="A search icon"></button>
+            <div class="date-block">
+                <label for="return-date" class="just-grey">
+                    <span>Return</span><span class="has-right-icon" id="plane-to-left"></span>
+                    <input type="date" name="comeback-date" id="return-date">
+                </label>
+            </div>
+        </div>
+
+        <button class="button-look-not-button"><span id="image-in-button"></span></button>
+
+    </div>
+
 
 </section>
 
@@ -96,183 +115,274 @@
 
 
 <section class="upcoming-offers">
-	<h2>
-		Special Upcoming Offers
-	</h2>
+    <h2>
+        Special Upcoming Offers
+    </h2>
 
-	<div class="three-choices">
-		<button>Team</button>
-		<button>Couple</button>
-		<button>Family</button>
-	</div>
+    <div class="three-choices">
+        <button class="button-look-not-button">Team</button>
+        <button class="button-look-not-button">Couple</button>
+        <button class="button-look-not-button">Family</button>
+    </div>
 
-	<div class="nice-picture-text">
-		<img src="media/round_pictures/beach_round.png" alt="Beach">
-		<span class="vertical-text">14 FEB 2022</span>
+    <div class="pretty-blocks-keeper">
+        <div class="pretty-block">
+            <div class="image-with-vertical">
+                <img src="media/round_pictures/beach_round.png" alt="Beach">
+                <span class="vertical-text">14 FEB 2022</span>
+            </div>
 
-		<span class="colored-round">Relax</span>
-		<span class="small-text">3 Days, 3 Nights</span>
+            <div class="details">
+                <span class="colored-round">Relax</span>
+                <span class="small-text">3 Days, 3 Nights</span>
+            </div>
 
-		<span class="name-of-place">Logo Sea</span>
-		<span class="price">700$ / Person</span>
+            <span class="name-of-place">Logo Sea</span>
 
-		<button type="submit">Book now</button>
-	</div>
+            <div class="last-row">
+                <span class="price">700$</span>
+                <span class="just-grey">/ Person</span>
+                <button type="submit">Book now</button>
+            </div>
+        </div>
 
-	<div class="nice-picture-text">
-		<img src="media/round_pictures/coast_round.png" alt="Beach">
-		<span class="vertical-text">18 JAN 2022</span>
+        <div class="pretty-block">
+            <div class="image-with-vertical">
+                <img src="media/round_pictures/coast_round.png" alt="Beach">
+                <span class="vertical-text">18 JAN 2022</span>
+            </div>
 
-		<span class="colored-round">Adventure</span>
-		<span class="small-text">4 Days, 3 Nights</span>
+            <div class="details">
+                <span class="colored-round" id="this-is-blue">Adventure</span>
+                <span class="small-text">4 Days, 3 Nights</span>
+            </div>
 
-		<span class="name-of-place">Ansgar Scheffold</span>
-		<span class="price">400$ / Person</span>
+            <span class="name-of-place">Ansgar Scheffold</span>
 
-		<button type="submit">Book now</button>
-	</div>
+            <div class="last-row">
+                <span class="price">400$</span>
+                <span class="just-grey">/ Person</span>
+                <button type="submit">Book now</button>
+            </div>
 
-	<div class="nice-picture-text">
-		<img src="media/round_pictures/man_lake_round.png" alt="Beach">
-		<span class="vertical-text">22 DEC 2022</span>
+        </div>
 
-		<span class="colored-round">Relax</span>
-		<span class="small-text">7 Days, 6 Nights</span>
+        <div class="pretty-block">
 
-		<span class="name-of-place">Lona X</span>
-		<span class="price">340$ / Person</span>
+            <div class="image-with-vertical">
+                <img src="media/round_pictures/man_lake_round.png" alt="Beach">
+                <span class="vertical-text">22 DEC 2022</span>
+            </div>
 
-		<button type="submit">Book now</button>
-	</div>
+            <div class="details">
+                <span class="colored-round">Relax</span>
+                <span class="small-text">7 Days, 6 Nights</span>
+            </div>
+
+
+            <span class="name-of-place">Lona X</span>
+
+            <div class="last-row">
+                <span class="price">340$</span>
+                <span class="just-grey">/ Person</span>
+                <button type="submit">Book now</button>
+            </div>
+
+        </div>
+    </div>
+
 
 </section>
 
 <!--the UPCOMING OFFERS is ready!)-->
 
 <section class="inspiration-block">
-	<img src="media/round_pictures/aesthtic_person.png" alt="a Man!">
-	<aside>
-		<article>
-			<h2>
-			Travel Any Corner of The World With Us
-			</h2>
-			<p class="alot-of-text">Would you explore nature paradise in the world, let’s find the best destination in world with us, Would you explore nature paradise in the world, let’s find the best destination in world with us. Would you explore nature paradise in the world, let’s find the best destination in world with us.
-				Would you explore nature paradise in the world, let’s find the best destination in world with us.
-			</p>
-		</article>
-		<button type="submit" class="blue-button">Contact us</button>
-	</aside>
+    <img src="media/round_pictures/cheat_code_picture_man.png" alt="a Man!">
+    <aside>
+        <article>
+            <h2>
+                Travel Any Corner of The World With Us
+            </h2>
+            <p class="alot-of-text">Would you explore nature paradise in the world, let’s find the best destination in
+                world with us, Would you explore nature paradise in the world, let’s find the best destination in world
+                with us. Would you explore nature paradise in the world, let’s find the best destination in world with
+                us.<br><br>
+                Would you explore nature paradise in the world? Let’s find the best destination in world with us!
+            </p>
+        </article>
+        <button type="submit" class="blue-button">Contact us</button>
+    </aside>
 </section>
 
 <!--the INSPIRATION is ready!)-->
 
-<section>
-	<h2>
-		Recommended Destination
-	</h2>
+<section id="people-ratings">
+    <h2>
+        Recommended Destination
+    </h2>
 
-	<div class="three-choices">
-		<button>Popular</button>
-		<button>Adventure</button>
-		<button>Beach</button>
-	</div>
+    <div class="three-choices">
+        <button class="button-look-not-button">Popular</button>
+        <button class="button-look-not-button">Adventure</button>
+        <button class="button-look-not-button">Beach</button>
+    </div>
 
-	<div class="nature-block">
-		<img src="media/small_nature/first.png" alt="Nature">
-		<div class="picture-footer">
-			<img src="media/small_nature/point_map.png" alt="Point">
-			<span class="name-of-place">Kina Mountain</span>
-		</div>
-	</div>
-
-	<div class="nature-block">
-		<img src="media/small_nature/second.png" alt="Nature">
-		<div class="picture-footer">
-			<img src="media/small_nature/point_map.png" alt="Point">
-			<span class="name-of-place">Kina Mountain</span>
-		</div>
-	</div>
-
-	<div class="nature-block">
-		<img src="media/small_nature/third.png" alt="Nature">
-		<div class="picture-footer">
-			<img src="media/small_nature/point_map.png" alt="Point">
-			<span class="name-of-place">Kina Mountain</span>
-		</div>
-	</div>
+    <div class="nature-here pretty-blocks-keeper">
+        <div class="nature-block pretty-block">
+            <div class="picture-and-rating">
+                <img src="media/small_nature/first.png" alt="Nature">
+                <div class="abs-wrapper">
+                    <div class="block-of-rating">
+                        <span class="star-here"></span>
+                        <span class="provided-rating">3.4</span>
+                    </div>
+                </div>
+            </div>
 
 
-	<div class="nature-block">
-		<img src="media/small_nature/forth.png" alt="Nature">
-		<div class="picture-footer">
-			<img src="media/small_nature/point_map.png" alt="Point">
-			<span class="name-of-place">Kina Mountain</span>
-		</div>
-	</div>
+            <span class="name-of-place">Kina Mountain</span>
+
+            <div class="picture-footer">
+                <span class="small-location"></span>
+                <span class="just-grey">Cambodia</span>
+            </div>
+
+        </div>
+
+        <div class="nature-block pretty-block">
+
+            <div class="picture-and-rating">
+                <img src="media/small_nature/second.png" alt="Nature">
+                <div class="abs-wrapper">
+                    <div class="block-of-rating">
+                        <span class="star-here"></span>
+                        <span class="provided-rating">4.2</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="name-of-place">Kina Mountain</span>
+
+            <div class="picture-footer">
+                <span class="small-location"></span>
+                <span class="just-grey">Cambodia</span>
+            </div>
+        </div>
+
+        <div class="nature-block pretty-block">
+
+            <div class="picture-and-rating">
+                <img src="media/small_nature/forth.png" alt="Nature">
+                <div class="abs-wrapper">
+                    <div class="block-of-rating">
+                        <span class="star-here"></span>
+                        <span class="provided-rating">3.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="name-of-place">Kina Mountain</span>
+
+            <div class="picture-footer">
+                <span class="small-location"></span>
+                <span class="just-grey">Cambodia</span>
+            </div>
+        </div>
+
+        <div class="nature-block pretty-block">
+
+            <div class="picture-and-rating">
+                <img src="media/small_nature/third.png" alt="Nature">
+                <div class="abs-wrapper">
+                    <div class="block-of-rating">
+                        <span class="star-here"></span>
+                        <span class="provided-rating">4.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <span class="name-of-place">Kina Mountain</span>
+
+            <div class="picture-footer">
+                <span class="small-location"></span>
+                <span class="just-grey">Cambodia</span>
+            </div>
+        </div>
+    </div>
 
 </section>
 
 <!--the LOCATIONS part is ready!)-->
 
 <section class="reviews">
-	<div class="review">
-		<img src="media/reviews/quote.png" alt="Quote">
-		<p class="comment">
-			Our trip to Morocco was truly a once in a lifetime experience, and we are so grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was incredible.
-		</p>
+    <div class="reviews-here">
+        <div class="review">
 
-		<span class="comment-author">
+            <p class="comment">
+                Our trip to Morocco was truly a once in a lifetime experience, and we are so grateful to everyone that
+                made
+                it happen seamlessly. Our travel planner, Jaouad, was incredible.
+            </p>
+
+            <span class="comment-author">
 			-Vand D
 		</span>
 
-		<span class="grey-text">Happy Treloo</span>
-		<img src="media/reviews/woman.png" alt="Woman picture">
-	</div>
-	<div class="review">
-		<img src="media/reviews/quote.png" alt="Quote">
-		<p class="comment">
-			Our trip to Morocco was truly a once in a lifetime experience, and we are so grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was incredible.
-		</p>
+            <span class="just-grey">Happy Treloo</span>
+            <div class="ellipse">
+                <img src="media/reviews/woman.png" alt="Woman picture">
+            </div>
+        </div>
 
-		<span class="comment-author">
+        <div class="review">
+            <p class="comment">
+                Our trip to Morocco was truly a once in a lifetime experience, and we are so grateful to everyone that
+                made
+                it happen seamlessly. Our travel planner, Jaouad, was incredible.
+            </p>
+
+            <span class="comment-author">
 			-Tru Vio
 		</span>
 
-		<span class="grey-text">Happy Treloo</span>
-		<img src="media/reviews/man.png" alt="Man picture">
-	</div>
+            <span class="just-grey">Happy Treloo</span>
+            <div class="ellipse">
+                <img src="media/reviews/man.png" alt="Man picture">
+            </div>
+        </div>
+    </div>
 
-	<div class="slider">
-		<button><</button>
-		<button>></button>
-	</div>
+    <div class="slider">
+        <button><</button>
+        <button>></button>
+    </div>
 
 </section>
 
 <!--the COMMENTS part is ready!)-->
 
 <section class="discount">
-	<img src="media/footer_back.png" alt="Discount picture">
-	<h2>
-		Don't Miss The 50% Discount if You register Today
-	</h2>
+    <h2>
+        Don't Miss The 50% Discount if You register Today
+    </h2>
 
-	<button type="submit" class="white-button">
-		Register Today
-	</button>
+    <button type="submit" class="white-button">
+        Register Today
+    </button>
+
 </section>
 
 <!--the DISCOUNT part is ready!)-->
 
 <footer>
-	<span class="grey-text">© 2022 Treloo LLC - All right reserved.</span>
+    <span class="just-grey">© 2022 Treloo LLC - All right reserved.</span>
 
-	<div class="footer-choices">
-		<button>Review</button>
-		<button>Tips</button>
-		<button>Alerts</button>
-		<button>Blog</button>
-	</div>
+    <div class="footer-choices">
+        <button class="">Review</button>
+        <button>Tips</button>
+        <button>Alerts</button>
+        <button>Blog</button>
+    </div>
 </footer>
 
 <!--the FOOTER is ready!)-->

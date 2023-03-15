@@ -1,20 +1,579 @@
+:root {
+    /* These values are taken from the design description */
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #3e86f5;
+    --grey: #acacac;
 
+    --largeText: 60px;
+    --bigText: 40px;
+    --midText: 22px;
+    --smallText: 16px;
+
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-size: var(--largeText);
+    text-align: center;
+    font-weight: bold;
+}
 
 header {
-    color: white;
+    color: var(--white);
+
     background-image: url("media/header_background.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    /*half of the image height = 952px (for good scaling)*/
+    height: 952px;
+    background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#header-name-nav {
+    padding-top: 4%;
+    padding-left: 8%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--bigText);
+}
+
+header nav {
+    /*If one wants to make header and nav at the same height, ADD: margin-top: 5%; */
+    margin: 0 10% 0 0;
+    font-size: var(--midText);
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav a {
+    color: var(--white);
+    padding: 0 10px 0 10px;
+}
+
+header nav a:hover {
+    /* A slight increase in font to make a responsiveness effect */
+    font-size: calc(var(--midText) + 0.5px);
+
+}
+
+
+header h2, header p {
+    text-align: center;
+    padding: 10% 25% 0 25%;
+
+}
+
+
+header p {
+    font-size: var(--smallText);
+}
+
+
+/*  HEADER IS READY!  */
+
+
+.button-look-not-button {
+    /* To make like not a standard button */
+    appearance: none;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+.icon-with-button {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.icon-with-button span {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#icon-plane {
+    width: 50px;
+    height: 50px;
+    background-image: url("media/icons/plane_icon.png");
+}
+
+#icon-hotel {
+    padding-top: 5px;
+    width: 35px;
+    height: 35px;
+    background-image: url("media/icons/house_icon.png");
+}
+
+.icon-with-button a {
+    padding-top: 20px;
+    color: var(--black);
+}
+
+div.travel-type, div.date-chooser {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--white);
+    margin: -100px 10% 0 10%;
+}
+
+
+div.travel-type {
+    width: 250px;
+    height: 80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+div.date-chooser {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+    margin-top: -25px;
+    /*border: dashed black;*/
+}
+
+div.date-chooser div.round-box {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    margin: 4% 0 4% 0;
+    padding: 20px 35px 20px 35px;
+    border-color: var(--grey);
+    border-style: solid;
+    border-radius: 15px;
+}
+
+div.round-box * {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+.icon-in-date-chooser {
+    height: 40px;
+    width: auto;
+}
+
+.break {
+    flex-basis: 100%;
+}
+
+.has-right-icon {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#plane-to-right {
+    background-image: url("media/icons/blue_small_plane.png");
+}
+
+#plane-to-left {
+    background-image: url("media/icons/blue_small_back_plane.png");
+}
+
+
+#image-in-button {
+    display: block;
+    height: 80px;
+    width: 80px;
+    background-image: url("media/icons/search_icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* DATE CHOOSER IS READY! */
+
+
+.upcoming-offers {
+    margin-top: 180px;
+    margin-bottom: 280px;
+    text-align: center;
+}
+
+
+.three-choices {
+    padding: 10px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-color: var(--white);
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 10px #cccccc;
+}
+
+
+.three-choices button {
+    padding: 10px 15px 10px 15px;
+    font-size: var(--midText);
+    color: #747474;
+}
+
+
+div.pretty-blocks-keeper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pretty-block {
+    background-color: var(--white);
+    padding: 10px 15px 15px 15px;
+    margin: 0 10px 0 10px;
+    width: 20%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.pretty-block * {
+    margin-bottom: 6px;
+}
+
+.pretty-block img {
+    width: 85%;
     height: auto;
 }
 
-.invisible-back {
-    border: 0;
-    background-color: inherit;
+.vertical-text {
+    writing-mode: vertical-lr;
+    color: #747474;
+    letter-spacing: 0.5rem;
 }
 
-section.choose-flight{
-    display: inline-grid;
+.image-with-vertical {
+    display: flex;
+    justify-content: space-around;
+}
+
+.details, .name-of-place, .last-row {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding-left: 30px;
+}
+
+.details span {
+    margin-right: 10px;
+    font-size: calc(var(--smallText) / 1.2);
+}
+
+.details span:first-child {
+    border-radius: 15px;
+    padding: 1px 10px 1px 10px;
+    color: #ff7d93;
+    background-color: #f8dae3;
+}
+
+.details span:nth-child(2) {
+    color: #747474;
+}
+
+.name-of-place {
+    font-size: var(--midText);
+    font-weight: bold;
+}
+
+.just-grey {
+    color: #979797;
+}
+
+.last-row button {
+    margin-left: auto;
+    background-color: #d6e7fd;
+    color: cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+#this-is-blue {
+    color: #825cf3;
+    background-color: #d6e7fd;
+}
+
+/* UPCOMING OFFERS IS READY! */
+
+
+.inspiration-block {
+    display: flex;
+    margin-bottom: 250px;
+}
+
+.inspiration-block img {
+    width: 45%;
+    height: auto;
+}
+
+article h2 {
+    margin-top: 80px;
 
 }
+
+.alot-of-text {
+    font-size: var(--midText);
+    color: #747474;
+}
+
+.blue-button {
+    border: none;
+    margin-top: 30px;
+    font-size: var(--midText);
+    color: var(--white);
+    background-color: #3e86f5;
+    box-shadow: 0 0 5px #82b8ff;
+    border-radius: 5px;
+    padding: 25px 30px 25px 30px;
+}
+
+/* INSPIRATION IS READY! */
+
+
+#people-ratings {
+    margin-bottom: 300px;
+}
+
+.nature-here .pretty-block img {
+    width: 100%;
+}
+
+.picture-and-rating {
+    position: relative;
+}
+
+.star-here {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("media/small_nature/star.png");
+}
+
+.block-of-rating {
+    display: flex;
+    font-weight: bold;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 20px;
+    border-color: var(--white);
+    border-style: solid;
+    background-color: var(--white);
+    padding-top: 4px;
+}
+
+.abs-wrapper {
+    position: absolute;
+    width: 25%;
+    top: 5%;
+    right: 5%;
+
+}
+
+.picture-footer {
+    display: flex;
+    margin-left: 20px;
+}
+
+.small-location {
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("media/small_nature/point_map.png");
+}
+
+
+/* LOCATIONS IS READY! */
+
+.reviews-here {
+    display: flex;
+    justify-content: center;
+}
+
+.review {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 75px;
+
+    background-image: url("media/reviews/quote.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 8%;
+}
+
+.review * {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+}
+
+.review p {
+    font-size: calc(var(--bigText) * 0.7);
+    margin-top: 100px;
+    width: 80%;
+}
+
+
+.review .comment-author {
+    color: #3e86f5;
+
+}
+
+.review:first-child {
+    margin-right: 20px;
+}
+
+.review:nth-child(2n) {
+    margin-left: 20px;
+}
+
+
+.review img {
+    padding-left: 7%;
+    margin-top: -80px;
+}
+
+
+.ellipse {
+    background-color: var(--white);
+    transform: translate(0, 80px);
+    width: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.slider button {
+    color: #3e86f5;
+    font-size: 72px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #82b8ff;
+    padding: 0 25px 0 25px;
+    transform: scale(0.6);
+    margin-bottom: 150px;
+}
+
+.slider button:first-child {
+    margin-right: 20px;
+}
+
+.slider button:nth-child(2n) {
+    margin-left: 20px;
+}
+
+/* COMMENTS ARE READY ! */
+
+section.discount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+    color: var(--white);
+    height: 500px;
+    width: 80%;
+
+    background: url("media/footer_back.png") no-repeat center center;
+    background-size: cover;
+
+    border-radius: 90px;
+
+}
+
+
+
+section.discount h2 {
+    width: 75%;
+    margin-top: -50px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+.white-button {
+    text-align: center;
+    border: none;
+    width: 20%;
+    color: #3e86f5;
+    padding: 20px 30px 20px 20px;
+    background-color: var(--white);
+    border-radius: 20px;
+    margin-top: 60px;
+
+    font-size: var(--midText);
+
+}
+
+
+/* DISCOUNT part is ready */
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+footer * {
+    margin-left: 70px;
+    margin-right: 70px;
+
+}
+
+
+footer .footer-choices {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div button {
+    text-decoration: none;
+    border-style: none;
+    background: transparent;
+    font-size: var(--midText);
+    color: var(--black);
+}
+
